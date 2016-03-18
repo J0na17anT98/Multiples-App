@@ -20,26 +20,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard" translatesAutoresizingMaskIntoConstraints="NO" id="JCa-30-th0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-eZ-h9T" userLabel="play button">
-                                <rect key="frame" x="193" y="388" width="215" height="212"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="212" id="4ee-9o-lDN"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="215" id="NSE-JR-QGk"/>
-                                    <constraint firstAttribute="width" constant="215" id="TzK-g8-ZbB"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="212" id="kPq-EG-WgT"/>
-                                </constraints>
-                                <state key="normal" image="play"/>
-                                <connections>
-                                    <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFF-0z-QDv"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="dM7-vC-0XV">
                                 <rect key="frame" x="33.5" y="28" width="533" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="6Bt-Hj-flk"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="What multiple to add by?" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-iN-r7d">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-iN-r7d">
                                 <rect key="frame" x="196" y="332" width="208" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="9Al-iR-jbT"/>
@@ -58,11 +45,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYm-JM-0QJ">
-                                <rect key="frame" x="197" y="424" width="211" height="101"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYm-JM-0QJ">
+                                <rect key="frame" x="194.5" y="424" width="211" height="101"/>
                                 <state key="normal" image="add"/>
                                 <connections>
                                     <action selector="onAddButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4e-cs-q6H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-eZ-h9T" userLabel="play button">
+                                <rect key="frame" x="193" y="388" width="215" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="4ee-9o-lDN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="215" id="NSE-JR-QGk"/>
+                                    <constraint firstAttribute="width" constant="215" id="TzK-g8-ZbB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="212" id="kPq-EG-WgT"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFF-0z-QDv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,6 +80,7 @@
                             <constraint firstItem="xoa-eZ-h9T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehk-UM-EgT"/>
                             <constraint firstItem="yYm-JM-0QJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j9e-bX-G9D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JCa-30-th0" secondAttribute="bottom" id="koz-g8-lM0"/>
+                            <constraint firstItem="yYm-JM-0QJ" firstAttribute="top" secondItem="0Ob-iN-r7d" secondAttribute="bottom" constant="52" id="lJy-Ca-Y8x"/>
                             <constraint firstItem="0Ob-iN-r7d" firstAttribute="top" secondItem="8QQ-87-vWq" secondAttribute="bottom" constant="57" id="lR1-qk-IRH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xoa-eZ-h9T" secondAttribute="bottom" id="qki-Uk-82C"/>
                             <constraint firstItem="0Ob-iN-r7d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r7z-Z2-IRX"/>

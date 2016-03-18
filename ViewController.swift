@@ -34,8 +34,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func onPlayButtonPressed(sender: UIButton) {
-        if whatMultipleText.text != nil &&
-        whatMultipleText.text != "" {
+        if whatMultipleText.text != nil && whatMultipleText.text != "" {
             
             logoImage.hidden = true
             whatMultipleText.hidden = true
@@ -52,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     func restartGame() {
-        multipleToAddBy = 0
+        multipleToAddBy = currentMultiple
         whatMultipleText.text = ""
         
         logoImage.hidden = false
@@ -64,7 +63,7 @@ class ViewController: UIViewController {
     }
     
     func isGameOver() -> Bool {
-        if currentMultiple >= multipleToAddBy {
+        if currentMultiple == multipleToAddBy {
             return true
         }else {
             return false
