@@ -9,23 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //properties
-    var multipleToAddBy = 0
-    var currentMultiple = 0
-    
+
     //outlets
     @IBOutlet weak var logoImage: UIImageView!
-    
     @IBOutlet weak var whatMultipleText: UITextField!
-    
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var multiplesLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     
-    //Actions
+    //properties
+    var multiple = 0
+    var runningSum = 0
+    let MAX_SUM = 50
+    
+
     @IBAction func onAddButtonTapped(sender: AnyObject) {
-        currentMultiple++
-        updateMultiplesLabel()
+        //Since we never change the newSum value make it a constant
+        let newSum = runningSum + multiple
+        updateMultiplesLabel(runningSum, mul: multiple, newSum:newSum)
+        runningSum += multiple
         
         if isGameOver() {
             restartGame()
@@ -33,51 +35,47 @@ class ViewController: UIViewController {
 }
     
     
-    @IBAction func onPlayButtonPressed(sender: UIButton) {
+    @IBAction func onPlayButtonPressed(sender: AnyObject) {
         if whatMultipleText.text != nil && whatMultipleText.text != "" {
             
             logoImage.hidden = true
             whatMultipleText.hidden = true
             playButton.hidden = true
-            
             multiplesLabel.hidden = false
             addButton.hidden = false
-        
-            multipleToAddBy = Int(multiplesLabel.text!)!
-            currentMultiple = 0
-            
-            updateMultiplesLabel()
+
+            resetLabel()
+            multiple = Int(whatMultipleText.text!)!
+            runningSum = 0
         }
     }
     
     func restartGame() {
-        multipleToAddBy = currentMultiple
+        multiple = 0
         whatMultipleText.text = ""
-        
+        whatMultipleText.hidden = false
         logoImage.hidden = false
         playButton.hidden = false
         whatMultipleText.hidden = false
-        
         addButton.hidden = true
         multiplesLabel.hidden = true
     }
     
+    func resetLabel() {
+        multiplesLabel.text = "Press Add to add!"
+    }
+    
     func isGameOver() -> Bool {
-        if currentMultiple == multipleToAddBy {
+        if runningSum >= MAX_SUM {
             return true
         }else {
             return false
         }
     }
     
-    func updateMultiplesLabel(){
-        multiplesLabel.text = "\(currentMultiple)"
-    
-    
-    
-
+    func updateMultiplesLabel(oldSum: Int, mul: Int, newSum: Int){
+        multiplesLabel.text = "\(oldSum) + \(mul) = \(newSum)"
     }
 
 
 }
-

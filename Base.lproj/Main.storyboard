@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -39,12 +39,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QQ-87-vWq">
-                                <rect key="frame" x="228" y="197" width="145" height="78"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="60"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYm-JM-0QJ">
                                 <rect key="frame" x="194.5" y="424" width="211" height="101"/>
                                 <state key="normal" image="add"/>
@@ -65,32 +59,44 @@
                                     <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFF-0z-QDv"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntG-tX-60x">
+                                <rect key="frame" x="0.0" y="198" width="600" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="gry-UY-taM"/>
+                                    <constraint firstAttribute="height" constant="78" id="t3B-ig-8jD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Ob-iN-r7d" secondAttribute="bottom" constant="228" id="CFc-PM-ID6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Ob-iN-r7d" secondAttribute="bottom" constant="228" id="Jug-iW-fSx"/>
                             <constraint firstItem="JCa-30-th0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MTP-js-bfW"/>
-                            <constraint firstItem="8QQ-87-vWq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEA-AF-k3m"/>
+                            <constraint firstItem="ntG-tX-60x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PJj-t7-6za"/>
                             <constraint firstItem="yYm-JM-0QJ" firstAttribute="top" secondItem="0Ob-iN-r7d" secondAttribute="bottom" constant="52" id="PY2-vY-W83"/>
                             <constraint firstItem="dM7-vC-0XV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bfn-FB-2Ti"/>
+                            <constraint firstItem="0Ob-iN-r7d" firstAttribute="top" secondItem="ntG-tX-60x" secondAttribute="bottom" constant="56" id="cgX-Dv-UVW"/>
                             <constraint firstAttribute="trailing" secondItem="JCa-30-th0" secondAttribute="trailing" id="d8W-03-Pmc"/>
                             <constraint firstItem="JCa-30-th0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dGp-3G-3Ww"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xoa-eZ-h9T" secondAttribute="bottom" id="dgR-CU-yf9"/>
                             <constraint firstItem="xoa-eZ-h9T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehk-UM-EgT"/>
+                            <constraint firstItem="ntG-tX-60x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="et4-ip-4og"/>
                             <constraint firstItem="yYm-JM-0QJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j9e-bX-G9D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JCa-30-th0" secondAttribute="bottom" id="koz-g8-lM0"/>
                             <constraint firstItem="yYm-JM-0QJ" firstAttribute="top" secondItem="0Ob-iN-r7d" secondAttribute="bottom" constant="52" id="lJy-Ca-Y8x"/>
-                            <constraint firstItem="0Ob-iN-r7d" firstAttribute="top" secondItem="8QQ-87-vWq" secondAttribute="bottom" constant="57" id="lR1-qk-IRH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xoa-eZ-h9T" secondAttribute="bottom" id="qki-Uk-82C"/>
                             <constraint firstItem="0Ob-iN-r7d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r7z-Z2-IRX"/>
+                            <constraint firstAttribute="trailing" secondItem="ntG-tX-60x" secondAttribute="trailing" id="zVb-NL-7wZ"/>
                             <constraint firstItem="dM7-vC-0XV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zpB-Qp-VBX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="yYm-JM-0QJ" id="ZR9-gv-je7"/>
                         <outlet property="logoImage" destination="dM7-vC-0XV" id="K5g-pG-NWB"/>
-                        <outlet property="multiplesLabel" destination="8QQ-87-vWq" id="0kW-eE-272"/>
+                        <outlet property="multiplesLabel" destination="ntG-tX-60x" id="GFW-vc-vN5"/>
                         <outlet property="playButton" destination="xoa-eZ-h9T" id="9Jp-xZ-K4p"/>
                         <outlet property="whatMultipleText" destination="0Ob-iN-r7d" id="cQr-A3-NIE"/>
                     </connections>
